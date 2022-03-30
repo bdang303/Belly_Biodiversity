@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron text-white" style="background-color:#fafafad9" div>
+     <div class="col-md-14 jumbotron text-center text-white" style="background-image: url(https://www.cedars-sinai.org/content/dam/cedars-sinai/blog/2020/06/viruses-bacteria-fungi.jpg)" div>
+        <h1 class ="bold" style="color:rgb(255, 255, 255)">Belly Button Biodiversity Dashboard</h1>
+        <p class ="bold" style="color:rgb(255, 255, 255)">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-14">
+        <h2 class="white-text">Dashboard Insights</h2>
+        <p class="aliceblue-text">Based  on your test results, there are a few visuals that can provide some additional insights into your actual test sample. The first table reflect various demographic information such as ethnicity, gender, age, and location. The first visual is a bar graph indicating the top 10 microbial species found in belly buttons. To the left is a gauge chart that shos the average scrubs per week. And lastly at the bottom of the page is a bubble chart that reflects the different culture types. </p>
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <p> Once you've selected your test subject ID from the dropdown, take a look at the dynamic charts to determine a match</p>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/charts.js"></script>
+
+</body>
+
+</html>
